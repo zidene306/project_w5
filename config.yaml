@@ -1,8 +1,8 @@
 input_data:
   file1: "../data/raw/df_final_demo.txt"
-  file2: "../data/raw/df_final_experiment_clients.txt"
-  file3: "../data/raw/df_final_web_data_pt_1.txt"
-  file4: "../data/raw/df_final_web_data_pt_2.txt"
+  file3: "../data/raw/df_final_experiment_clients.txt"
+  file2p1: "../data/raw/df_final_web_data_pt_1.txt"
+  file2p2: "../data/raw/df_final_web_data_pt_2.txt"
 
 output_data:
-  file1: 
+  file2: "../data/clean/digfootpring_groups_clean.csv"

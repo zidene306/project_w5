@@ -5,4 +5,4 @@ input_data:
   file4: "../data/raw/df_final_web_data_pt_2.txt"
 
 output_data:
-  file1: 
+  file1: "../data/clean/clean_final_demo.csv"

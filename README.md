@@ -170,9 +170,7 @@ The **Test** group backtracks far more on steps 1–2 (≈16% vs ≈8%) — the 
 | Control | 71.40% |
 | Test | 81.64% |
 
-🤖 *Net-new finding — verify:* despite higher mid-funnel friction, **Test completes ~10 pts more often** than Control. The redesign appears to trade more mid-flow exploration for a higher overall completion rate — to be confirmed with hypothesis testing.
 
-> **Caveat:** the error metric captures all backwards moves, including intentional corrections; it measures navigation friction rather than pure mistakes.
 
 ---
 
@@ -193,14 +191,6 @@ The **Test** group backtracks far more on steps 1–2 (≈16% vs ≈8%) — the 
 
 🔗 [Vanguard A/B Test datasets — Ironhack provided via course portal]
 
----
-
-## Contributors
-
-| Name | Workstream |
-|---|---|
-| Diana Yule | Web data cleaning, experiment group merging, master dataset, EDA (group balance, error & completion rates) |
-| Zidene | Demographics cleaning, dataset assembly |
 
 ---
 

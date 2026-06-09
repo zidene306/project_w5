@@ -4,6 +4,8 @@ Derived from work in:
   - cleaning_exp_web_data_Diana.ipynb
   - clean_up_final_demo_zidene.ipynb
   - Merge_files.ipynb
+  - DesignEffectiveness_Diana.ipynb    (group balance / demographics — replaces Clients5steps_vs_others)
+  - Error&CompletionRates_Diana.ipynb  (error rate per step + completion rate)
 """
 
 import pandas as pd
@@ -13,11 +15,11 @@ import yaml
 # ---------------------------------------------------------------------------
 # I/O HELPERS
 # ---------------------------------------------------------------------------
+import csv
 
 def read_file(yaml_path: str, section: str, file_key: str) -> pd.DataFrame | None:
     """
     Load a CSV file whose path is defined in config.yaml.
-
     Parameters
     ----------
     yaml_path : str
@@ -26,11 +28,17 @@ def read_file(yaml_path: str, section: str, file_key: str) -> pd.DataFrame | Non
         Top-level key in the YAML file (e.g. 'input_data' or 'output_data').
     file_key : str
         Key within that section that holds the file path (e.g. 'file1').
-
     Returns
     -------
     pd.DataFrame or None
         Loaded DataFrame, or None if the config file is missing.
+    Notes
+    -----
+    Uses csv.Sniffer to auto-detect the delimiter from the file itself.
+    ⚠️ DO NOT use this function on files exported from a Windows machine
+    (e.g. Zidene's exports): CRLF line endings / BOM break Sniffer's
+    detection and can mis-read the delimiter. For those files load with:
+        pd.read_csv(path, sep=None, engine='python')
     """
     try:
         with open(yaml_path, "r") as f:
@@ -38,9 +46,13 @@ def read_file(yaml_path: str, section: str, file_key: str) -> pd.DataFrame | Non
     except FileNotFoundError:
         print(f"[read_file] Config not found: {yaml_path}")
         return None
-
     file_path = cfg[section][file_key]
-    return pd.read_csv(file_path, low_memory=False)
+    
+    # detect separator from the file itself
+    with open(file_path, "r") as f:
+        sep = csv.Sniffer().sniff(f.readline()).delimiter
+    
+    return pd.read_csv(file_path, sep=sep, low_memory=False)
 
 
 def out_csv(df: pd.DataFrame, yaml_path: str, section: str, file_key: str) -> None:
@@ -171,3 +183,53 @@ def merge_demo_web(demo_df: pd.DataFrame, web_df: pd.DataFrame) -> pd.DataFrame:
         Master DataFrame combining all 14 columns for downstream analysis.
     """
     return pd.merge(demo_df, web_df, on="client_id", how="outer")
+
+
+# ---------------------------------------------------------------------------
+# EDA UTILITIES
+# ---------------------------------------------------------------------------
+
+import numpy as np
+
+
+def filter_valid_groups(df: pd.DataFrame, exclude_gender_x: bool = True) -> pd.DataFrame:
+    """
+    Filter the master DataFrame to include only Control and Test clients,
+    optionally removing clients with gendr == 'X'.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Master DataFrame (output of merge_demo_web with Variation filled).
+    exclude_gender_x : bool, default True
+        If True, also drops rows where gendr == 'X'.
+
+    Returns
+    -------
+    pd.DataFrame
+        Filtered DataFrame containing only Control and Test rows.
+    """
+    out = df[df["Variation"].isin(["Control", "Test"])].copy()
+    if exclude_gender_x:
+        out = out[out["gendr"] != "X"]
+    return out
+
+
+def flag_no_data_variation(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Replace NaN values in the Variation column with the string 'no_data'.
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        DataFrame with a Variation column that may contain NaN values.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with NaN Variation replaced by 'no_data'.
+    """
+    out = df.copy()
+    out["Variation"] = np.where(out["Variation"].isnull(), "no_data", out["Variation"])
+    return out
+

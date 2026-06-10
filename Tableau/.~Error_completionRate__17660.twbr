@@ -1,0 +1,1717 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0512.1636                               -->
+<workbook original-version='18.1' source-build='2026.1.2 (20261.26.0512.1636)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Error_completionRate' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+    <color-palette custom='true' name='Vanguard' type='regular'>
+      <color>#1b3a6b</color>
+      <color>#2e6fad</color>
+      <color>#5ba3d9</color>
+      <color>#b8d4ee</color>
+      <color>#cc0000</color>
+      <color>#2e7d32</color>
+      <color>#6b7280</color>
+      <color>#f5f5f5</color>
+      <color>#1a1a2e</color>
+    </color-palette>
+  </preferences>
+  <style>
+    <style-rule element='worksheet'>
+      <format attr='color' value='#1a1a2e' />
+    </style-rule>
+    <style-rule element='gridline'>
+      <format attr='stroke-color' value='#6b7280' />
+    </style-rule>
+    <style-rule element='title'>
+      <format attr='color' value='#1b3a6b' />
+    </style-rule>
+    <style-rule element='dash-title'>
+      <format attr='color' value='#1a1a2e' />
+    </style-rule>
+    <style-rule element='all'>
+      <format attr='font-family' value='Arial' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='error_compRate_tableau' inline='true' name='federated.1hbmymg18zbbt617nrfyd036etn2' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='error_compRate_tableau' name='textscan.108i6040se961p15z8vsx080c7m3'>
+            <connection class='textscan' directory='/Users/dianayule/Documents/03_RESOURCES/Learning/DataAnalytics Ironhack/Week5/project_w5/data/clean' filename='error_compRate_tableau.csv' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.108i6040se961p15z8vsx080c7m3' name='error_compRate_tableau.csv' table='[error_compRate_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+            <column datatype='integer' name='client_id' ordinal='0' />
+            <column datatype='real' name='clnt_tenure_yr' ordinal='1' />
+            <column datatype='real' name='clnt_age' ordinal='2' />
+            <column datatype='string' name='gendr' ordinal='3' />
+            <column datatype='string' name='Variation' ordinal='4' />
+            <column datatype='string' name='visit_id' ordinal='5' />
+            <column datatype='string' name='process_step' ordinal='6' />
+            <column datatype='boolean' name='is_error' ordinal='7' />
+            <column datatype='integer' name='attempt_No' ordinal='8' />
+            <column datatype='boolean' name='finish' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;¤&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>client_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[client_id]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>client_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_tenure_yr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_tenure_yr]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>clnt_tenure_yr</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clnt_age</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clnt_age]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>clnt_age</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gendr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gendr]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>gendr</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Variation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Variation]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>Variation</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[visit_id]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>visit_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>process_step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[process_step]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>process_step</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_error</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_error]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>is_error</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attempt_No</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[attempt_No]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>attempt_No</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>finish</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[finish]</local-name>
+            <parent-name>[error_compRate_tableau.csv]</parent-name>
+            <remote-alias>finish</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='% Finisher clients' datatype='real' name='[Calculation_0662122900758529]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [finish] = TRUE THEN [client_id] END)&#10;/&#10;COUNTD([client_id])' />
+      </column>
+      <column caption='Max attempts per client' datatype='integer' name='[Calculation_0662122902818818]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ FIXED [Variation], [client_id] : MAX([attempt_No]) }' />
+      </column>
+      <column caption='Completion rate %' datatype='real' name='[Calculation_0662122903105539]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD(IF [finish] = TRUE THEN STR([client_id]) + &quot;-&quot; + STR([attempt_No]) END)&#10;/&#10;SUM([Calculation_0662122902818818])' />
+      </column>
+      <column aggregation='None' caption='Clnt Age (bin)' datatype='integer' name='[Clnt Age (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[clnt_age]' peg='0' size='10' />
+      </column>
+      <column aggregation='None' caption='Clnt Tenure Yr (bin)' datatype='integer' name='[Clnt Tenure Yr (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[clnt_tenure_yr]' peg='0' size='10' />
+      </column>
+      <column caption='Is Error (0/1)' datatype='integer' name='[Is Error (copy)_0662122925899780]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='If [is_error]= TRUE THEN 1 ELSE 0 END' />
+      </column>
+      <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+      <column caption='error_compRate_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]' role='measure' type='quantitative' />
+      <column caption='attempt No' datatype='integer' name='[attempt_No]' role='measure' type='quantitative' />
+      <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+      <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+      <column caption='Clnt Tenure Yr' datatype='real' name='[clnt_tenure_yr]' role='measure' type='quantitative' />
+      <column caption='Finish' datatype='boolean' name='[finish]' role='dimension' type='nominal' />
+      <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+      <column caption='Is Error' datatype='boolean' name='[is_error]' role='dimension' type='nominal' />
+      <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+      <column caption='Visit Id' datatype='string' name='[visit_id]' role='dimension' type='nominal' />
+      <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+      <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='Data/tableau-temp/#TableauTemp_1fsr5201m7hudj1gzaip414f4wph.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/10/2026 12:47:24 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>client_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[client_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>client_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>129280</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_tenure_yr</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_tenure_yr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>clnt_tenure_yr</remote-alias>
+              <ordinal>1</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>clnt_age</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[clnt_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>clnt_age</remote-alias>
+              <ordinal>2</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>248</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gendr</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gendr]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>gendr</remote-alias>
+              <ordinal>3</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Variation</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Variation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Variation</remote-alias>
+              <ordinal>4</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[visit_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visit_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>170976</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>process_step</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[process_step]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>process_step</remote-alias>
+              <ordinal>6</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_error</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_error]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>is_error</remote-alias>
+              <ordinal>7</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>attempt_No</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[attempt_No]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>attempt_No</remote-alias>
+              <ordinal>8</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>finish</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[finish]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>finish</remote-alias>
+              <ordinal>9</ordinal>
+              <family>error_compRate_tableau.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Variation:nk]' palette='Vanguard' type='palette'>
+            <map to='#1b3a6b'>
+              <bucket>&quot;Control&quot;</bucket>
+            </map>
+            <map to='#cc0000'>
+              <bucket>&quot;Test&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;no_data&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:gendr:nk]' palette='Vanguard' type='palette'>
+            <map to='#1b3a6b'>
+              <bucket>&quot;M&quot;</bucket>
+            </map>
+            <map to='#6b7280'>
+              <bucket>&quot;U&quot;</bucket>
+            </map>
+            <map to='#cc0000'>
+              <bucket>&quot;F&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='error_compRate_tableau.csv' id='error_compRate_tableau.csv_128024538B0D4904A5A6BEA53BEE2335'>
+            <properties context=''>
+              <relation connection='textscan.108i6040se961p15z8vsx080c7m3' name='error_compRate_tableau.csv' table='[error_compRate_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en' separator=','>
+                  <column datatype='integer' name='client_id' ordinal='0' />
+                  <column datatype='real' name='clnt_tenure_yr' ordinal='1' />
+                  <column datatype='real' name='clnt_age' ordinal='2' />
+                  <column datatype='string' name='gendr' ordinal='3' />
+                  <column datatype='string' name='Variation' ordinal='4' />
+                  <column datatype='string' name='visit_id' ordinal='5' />
+                  <column datatype='string' name='process_step' ordinal='6' />
+                  <column datatype='boolean' name='is_error' ordinal='7' />
+                  <column datatype='integer' name='attempt_No' ordinal='8' />
+                  <column datatype='boolean' name='finish' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='CompRate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Rate of successfully finished attempts</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='CompRate' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column caption='Max attempts per client' datatype='integer' name='[Calculation_0662122902818818]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ FIXED [Variation], [client_id] : MAX([attempt_No]) }' />
+            </column>
+            <column caption='Completion rate %' datatype='real' name='[Calculation_0662122903105539]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [finish] = TRUE THEN STR([client_id]) + &quot;-&quot; + STR([attempt_No]) END)&#10;/&#10;SUM([Calculation_0662122902818818])' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='attempt No' datatype='integer' name='[attempt_No]' role='measure' type='quantitative' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column caption='Finish' datatype='boolean' name='[finish]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_0662122903105539]' derivation='User' name='[usr:Calculation_0662122903105539:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122903105539:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122903105539:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122903105539:qk]</rows>
+        <cols>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{F8B0A525-8977-462F-936B-B80B57AA9F1C}' />
+    </worksheet>
+    <worksheet name='ErrorAge'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Error rate per Age</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Error % is calculated as the average of number of errors for each Clnt Age Yr (bin) broken down by Variation.  Each bin indicates 10 years window, e.g. bin = 10 means clients between the age of 10 and 10 years old.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <repository-location id='ErrorAge' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column aggregation='None' caption='Clnt Age (bin)' datatype='integer' name='[Clnt Age (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[clnt_age]' peg='0' size='10' />
+            </column>
+            <column caption='Is Error (0/1)' datatype='integer' name='[Is Error (copy)_0662122925899780]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [is_error]= TRUE THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[Is Error (copy)_0662122925899780]' derivation='Avg' name='[avg:Is Error (copy)_0662122925899780:qk]' pivot='key' type='quantitative' />
+            <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+            <column caption='Is Error' datatype='boolean' name='[is_error]' role='dimension' type='nominal' />
+            <column-instance column='[Clnt Age (bin)]' derivation='None' name='[none:Clnt Age (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='1' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='2' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='3' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='4' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='5' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='6' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='7' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='8' />
+              <groupfilter function='member' level='[none:Clnt Age (bin):ok]' member='9' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+            <format attr='width' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]' value='22' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]</rows>
+        <cols>([federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk] / [federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok])</cols>
+        <show-full-range>
+          <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[Clnt Age (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{16B13633-CFC6-424E-977F-0FECA9CCC3ED}' />
+    </worksheet>
+    <worksheet name='ErrorTenure'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Tenure year vs Error rate</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Error % is calculated as the average of number of errors for each Clnt Tenure Yr (bin) broken down by Variation.  Each bin indicates 10 years window, e.g. bin = 0 means clients with 0 to 9 years of tenure.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <repository-location id='ErrorTenure' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column aggregation='None' caption='Clnt Tenure Yr (bin)' datatype='integer' name='[Clnt Tenure Yr (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[clnt_tenure_yr]' peg='0' size='10' />
+            </column>
+            <column caption='Is Error (0/1)' datatype='integer' name='[Is Error (copy)_0662122925899780]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [is_error]= TRUE THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[Is Error (copy)_0662122925899780]' derivation='Avg' name='[avg:Is Error (copy)_0662122925899780:qk]' pivot='key' type='quantitative' />
+            <column caption='Clnt Tenure Yr' datatype='real' name='[clnt_tenure_yr]' role='measure' type='quantitative' />
+            <column caption='Is Error' datatype='boolean' name='[is_error]' role='dimension' type='nominal' />
+            <column-instance column='[Clnt Tenure Yr (bin)]' derivation='None' name='[none:Clnt Tenure Yr (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='0' />
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='1' />
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='2' />
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='3' />
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='4' />
+              <groupfilter function='member' level='[none:Clnt Tenure Yr (bin):ok]' member='5' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' scope='rows' value='% Error' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+            <format attr='width' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]' value='35' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]</rows>
+        <cols>([federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk] / [federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok])</cols>
+        <show-full-range>
+          <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[Clnt Age (bin)]</column>
+          <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[Clnt Tenure Yr (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{19FEAF89-3929-4C6E-B533-1FA5FDFAA974}' />
+    </worksheet>
+    <worksheet name='ErrorsPsteps'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#1a2b5a' fontname='Cambria,serif' fontsize='10'>Error Rate per Funnel Step (%)</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='ErrorsPsteps' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column caption='Is Error (0/1)' datatype='integer' name='[Is Error (copy)_0662122925899780]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [is_error]= TRUE THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[Is Error (copy)_0662122925899780]' derivation='Avg' name='[avg:Is Error (copy)_0662122925899780:qk]' pivot='key' type='quantitative' />
+            <column caption='Is Error' datatype='boolean' name='[is_error]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[process_step]' derivation='None' name='[none:process_step:nk]' pivot='key' type='nominal' />
+            <column caption='Process Step' datatype='string' name='[process_step]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Control&quot;</bucket>
+              <bucket>&quot;Test&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <manual-sort column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:process_step:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;start&quot;</bucket>
+              <bucket>&quot;step_1&quot;</bucket>
+              <bucket>&quot;step_2&quot;</bucket>
+              <bucket>&quot;step_3&quot;</bucket>
+              <bucket>&quot;confirm&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:process_step:nk]' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]</rows>
+        <cols>([federated.1hbmymg18zbbt617nrfyd036etn2].[none:process_step:nk] / [federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk])</cols>
+      </table>
+      <simple-id uuid='{8BBE0E90-2D28-4B51-BCD7-7E0BEA22FD11}' />
+    </worksheet>
+    <worksheet name='FinishersRate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Clients completion rate</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='FinishersRate' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column caption='% Finisher clients' datatype='real' name='[Calculation_0662122900758529]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD(IF [finish] = TRUE THEN [client_id] END)&#10;/&#10;COUNTD([client_id])' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column caption='Finish' datatype='boolean' name='[finish]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_0662122900758529]' derivation='User' name='[usr:Calculation_0662122900758529:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' value='126' />
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122900758529:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122900758529:qk]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='line-pattern-only' scope='cols' value='dashed' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[usr:Calculation_0662122900758529:qk]</rows>
+        <cols>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{229E45BE-5A1B-4936-AB13-6333D4DF3098}' />
+    </worksheet>
+    <worksheet name='Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>
+Gender Distribution by Variation group</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column caption='Client Id' datatype='integer' name='[client_id]' role='dimension' type='ordinal' />
+            <column caption='Gendr' datatype='string' name='[gendr]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+            <column-instance column='[gendr]' derivation='None' name='[none:gendr:nk]' pivot='key' type='nominal' />
+            <column-instance column='[client_id]' derivation='CountD' name='[pcto:ctd:client_id:qk:6]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <natural-sort column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:gendr:nk]' direction='DESC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[pcto:ctd:client_id:qk:6]' scope='rows' value='% Clients' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[pcto:ctd:client_id:qk:6]' value='p0.00%' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[pcto:ctd:client_id:qk:6]' value='p0%' />
+            <format attr='color' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[pcto:ctd:client_id:qk:6]' value='#1a1a2e' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:gendr:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[pcto:ctd:client_id:qk:6]</rows>
+        <cols>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{47104EF6-B3AB-4E60-93BB-9EF3BA68AC95}' />
+    </worksheet>
+    <worksheet name='TtlErrorRate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Process Error rate per Variation groups</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='TtlErrorRate' path='/workbooks/Error_completionRate' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+            <column caption='Is Error (0/1)' datatype='integer' name='[Is Error (copy)_0662122925899780]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='If [is_error]= TRUE THEN 1 ELSE 0 END' />
+            </column>
+            <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+            <column-instance column='[Is Error (copy)_0662122925899780]' derivation='Avg' name='[avg:Is Error (copy)_0662122925899780:qk]' pivot='key' type='quantitative' />
+            <column caption='Is Error' datatype='boolean' name='[is_error]' role='dimension' type='nominal' />
+            <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Control&quot;' />
+              <groupfilter function='member' level='[none:Variation:nk]' member='&quot;Test&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hbmymg18zbbt617nrfyd036etn2].[avg:Is Error (copy)_0662122925899780:qk]</rows>
+        <cols>[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]</cols>
+      </table>
+      <simple-id uuid='{6EE9BEAA-B8E2-4E73-A4A3-6F1ACC811481}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 3'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98086' id='7' param='horz' type-v2='layout-flow' w='97538' x='1231' y='957'>
+            <zone h='98086' id='5' type-v2='layout-basic' w='72923' x='1231' y='957'>
+              <zone h='98086' id='3' name='Gender' w='72923' x='1231' y='957'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98086' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='24615' x='74154' y='957'>
+              <zone h='9928' id='8' name='Gender' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:gendr:nk]' type-v2='color' w='24615' x='74154' y='957'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98086' id='15' param='vert' type-v2='layout-flow' w='97538' x='1231' y='957'>
+                <zone fixed-size='280' h='98086' id='3' is-fixed='true' name='Gender' w='72923' x='1231' y='957'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9928' id='8' name='Gender' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:gendr:nk]' type-v2='color' w='24615' x='74154' y='957'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{60C6EB46-B2C1-42C2-BF8C-06F74FF994C2}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='KPIsSummary'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>KPIs Summary</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location id='Dashboard1' path='/workbooks/Error_completionRate' revision='' />
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f5f5f5' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='background-color' value='#c0c0c0' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='background-color' value='#e6e6e6' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+        <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+        <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98084' id='5' param='vert' type-v2='layout-flow' w='98816' x='592' y='958'>
+            <zone h='4192' id='7' type-v2='title' w='98816' x='592' y='958'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='93892' id='6' type-v2='layout-basic' w='98816' x='592' y='5150' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='37126' id='8' name='FinishersRate' w='32272' x='6958' y='6347' />
+        <zone h='15449' id='9' name='FinishersRate' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6144' x='592' y='6587' />
+        <zone h='7545' id='10' name='FinishersRate' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='color' w='6366' x='44115' y='6946' />
+        <zone h='36647' id='11' name='CompRate' w='38120' x='52628' y='6347' />
+        <zone h='14491' id='12' name='CompRate' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6662' x='92154' y='6587' />
+        <zone h='50659' id='13' name='ErrorsPsteps' w='70836' x='8734' y='48263' />
+        <zone h='15449' id='14' name='ErrorsPsteps' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6440' x='79941' y='52934' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>KPIs Summary</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98084' id='31' param='vert' type-v2='layout-flow' w='98816' x='592' y='958'>
+                <zone h='4192' id='7' type-v2='title' w='98816' x='592' y='958'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15449' id='9' mode='checkdropdown' name='FinishersRate' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6144' x='592' y='6587'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37126' id='8' is-fixed='true' name='FinishersRate' w='32272' x='6958' y='6347'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7545' id='10' name='FinishersRate' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='color' w='6366' x='44115' y='6946'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14491' id='12' mode='checkdropdown' name='CompRate' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6662' x='92154' y='6587'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36647' id='11' is-fixed='true' name='CompRate' w='38120' x='52628' y='6347'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='15449' id='14' mode='checkdropdown' name='ErrorsPsteps' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='6440' x='79941' y='52934'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50659' id='13' is-fixed='true' name='ErrorsPsteps' w='70836' x='8734' y='48263'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{51C8F76C-E4E3-4A28-A8D0-4E1A809BAEB0}' />
+    </dashboard>
+    <dashboard enable-sort-zone-taborder='true' name='TenureAgeErrors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Error rate vs Tenure/Age</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='dash-title'>
+          <format attr='background-color' value='#d4d4d4' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='error_compRate_tableau' name='federated.1hbmymg18zbbt617nrfyd036etn2' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1hbmymg18zbbt617nrfyd036etn2'>
+        <column aggregation='None' caption='Clnt Age (bin)' datatype='integer' name='[Clnt Age (bin)]' role='dimension' type='ordinal'>
+          <calculation class='bin' decimals='1' formula='[clnt_age]' peg='0' size='10' />
+        </column>
+        <column aggregation='None' caption='Clnt Tenure Yr (bin)' datatype='integer' name='[Clnt Tenure Yr (bin)]' role='dimension' type='ordinal'>
+          <calculation class='bin' decimals='1' formula='[clnt_tenure_yr]' peg='0' size='10' />
+        </column>
+        <column datatype='string' name='[Variation]' role='dimension' type='nominal' />
+        <column caption='Clnt Age' datatype='real' name='[clnt_age]' role='measure' type='quantitative' />
+        <column caption='Clnt Tenure Yr' datatype='real' name='[clnt_tenure_yr]' role='measure' type='quantitative' />
+        <column-instance column='[Clnt Age (bin)]' derivation='None' name='[none:Clnt Age (bin):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Clnt Tenure Yr (bin)]' derivation='None' name='[none:Clnt Tenure Yr (bin):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Variation]' derivation='None' name='[none:Variation:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97952' id='20' param='vert' type-v2='layout-flow' w='98790' x='605' y='1024'>
+            <zone h='4481' id='21' type-v2='title' w='98790' x='605' y='1024'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='93471' id='7' param='horz' type-v2='layout-flow' w='98790' x='605' y='5505'>
+              <zone h='93471' id='5' type-v2='layout-basic' w='98790' x='605' y='5505'>
+                <zone h='93471' id='3' name='ErrorAge' w='46748' x='52647' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='93471' id='16' name='ErrorTenure' w='36989' x='605' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='11484' id='10' name='ErrorAge' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='color' w='15053' x='37594' y='42283'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='22970' id='17' name='ErrorTenure' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]' type-v2='filter' w='15053' x='37594' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='13808' id='18' name='ErrorTenure' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='15053' x='37594' y='28475'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='26423' id='8' name='ErrorAge' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]' type-v2='filter' w='15053' x='37594' y='53767'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='18786' id='9' name='ErrorAge' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='15053' x='37594' y='80190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Error rate vs Tenure/Age</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='950' minheight='950' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='33' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97952' id='32' param='vert' type-v2='layout-flow' w='98790' x='605' y='1024'>
+                <zone h='4481' id='21' type-v2='title' w='98790' x='605' y='1024'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='22970' id='17' mode='checkdropdown' name='ErrorTenure' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]' type-v2='filter' w='15053' x='37594' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13808' id='18' mode='checkdropdown' name='ErrorTenure' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='15053' x='37594' y='28475'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='93471' id='16' is-fixed='true' name='ErrorTenure' w='36989' x='605' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='26423' id='8' mode='checkdropdown' name='ErrorAge' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]' type-v2='filter' w='15053' x='37594' y='53767'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='18786' id='9' mode='checkdropdown' name='ErrorAge' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='filter' w='15053' x='37594' y='80190'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='93471' id='3' is-fixed='true' name='ErrorAge' w='46748' x='52647' y='5505'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11484' id='10' name='ErrorAge' pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type-v2='color' w='15053' x='37594' y='42283'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{2DCFB4A0-1F19-4D73-A4B3-B92F4B7B6D3C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='FinishersRate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6148E81D-92FA-4796-8A6E-4306C70D4D95}' />
+    </window>
+    <window class='worksheet' name='CompRate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{71923D1C-382C-4566-95E0-84688D10CCCE}' />
+    </window>
+    <window class='worksheet' name='ErrorsPsteps'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='108'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D82850C1-F9B2-4F90-A243-A8E0F603950C}' />
+    </window>
+    <window class='worksheet' name='TtlErrorRate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{138E128B-E7D3-416F-A035-10F0229D74E8}' />
+    </window>
+    <window class='worksheet' name='ErrorAge'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Age (bin):ok]' type='filter' />
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B2CEC2C1-FDAE-4094-80FC-4FDE3537CE50}' />
+    </window>
+    <window class='worksheet' name='ErrorTenure'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Clnt Tenure Yr (bin):ok]' type='filter' />
+            <card param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:Variation:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{85D97B9A-3667-4C91-B206-02EC71AB9F64}' />
+    </window>
+    <window class='worksheet' name='Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hbmymg18zbbt617nrfyd036etn2].[none:gendr:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{948395BE-EB59-487E-B36A-8081435F9A48}' />
+    </window>
+    <window class='dashboard' name='KPIsSummary'>
+      <viewpoints>
+        <viewpoint name='CompRate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ErrorsPsteps'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='FinishersRate'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{4CC96511-0165-423D-9E7B-41BBCFE41356}' />
+    </window>
+    <window class='dashboard' maximized='true' name='TenureAgeErrors'>
+      <viewpoints>
+        <viewpoint name='ErrorAge'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ErrorTenure'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='21' />
+      <device-preview visible='true' />
+      <simple-id uuid='{F4EB5818-A333-4D39-AA51-A14CB0F58773}' />
+    </window>
+    <window class='dashboard' name='Dashboard 3'>
+      <viewpoints>
+        <viewpoint name='Gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{686F55F3-ACD8-48B0-A5AD-32062C0BE993}' />
+    </window>
+  </windows>
+</workbook>

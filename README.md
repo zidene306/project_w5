@@ -95,6 +95,8 @@ jupyter notebook
 
 > All file paths are managed via `config.yaml` — no hardcoded paths in notebooks.
 
+> ⚠️ **Windows-exported files (Zidene's outputs):** CRLF/BOM in those files breaks the project's `read_file()` helper. Load them with `pd.read_csv(path, sep=None, engine='python')` instead.
+
 ---
 
 ## How to Run
@@ -161,16 +163,36 @@ Gender distribution is also near-identical across groups (F ~32%, M ~33%, U ~34%
 
 The **Test** group backtracks far more on steps 1–2 (≈16% vs ≈8%) — the redesign adds friction early in the flow. At step 3 both jump, with Control highest (18.9%). At the decisive **confirm** step the pattern flips: Test finishes *cleaner* (1.8% vs 4.6%).
 
-#### Completion Rate
+#### Completion Rate — two metrics
 
-**Completion** = unique clients reaching `confirm` (step 4) without an error on that step, measured per attempt.
+| Metric | Definition | Control | Test |
+|---|---|---|---|
+| **`%_finisher_clients`** | Finishers / unique clients in group (**primary**) | 62.45% | 68.04% |
+| **`completion_rate_%`** | Finishers / total process attempts (**secondary**) | 71.40% | 81.64% |
 
-| Group | Completion rate |
-|---|---|
-| Control | 71.40% |
-| Test | 81.64% |
+`%_finisher_clients` is the primary KPI: the unit of randomisation is the *client*, not the attempt, so this is the correct denominator for comparing group outcomes. `completion_rate_%` is a secondary view useful for per-attempt efficiency; it rises even more in Test because Test clients also retry less often on the confirm step.
 
+---
 
+## Hypothesis Testing
+
+One-sided z-tests for proportions (manual implementation via `scipy.stats.norm`), testing whether the redesign increased each metric.
+
+### H1 — Completion Rate (primary metric: `%_finisher_clients`)
+
+- **H₀:** p_Test ≤ p_Control (redesign has no positive effect)
+- **H₁:** p_Test > p_Control (redesign improves completion rate)
+- Denominator: unique clients per group (unit of randomisation)
+- Result: observed gap = **+5.59 pp** (68.04% − 62.45%)
+
+### H2 — Error Rate
+
+- **H₀:** error_Test ≤ error_Control (redesign does not increase errors)
+- **H₁:** error_Test > error_Control (redesign increases errors)
+- Denominator: steps 1–4 per group (steps where backward navigation is possible)
+- Result: observed gap = **+2.38 pp** (10.46% − 8.08%)
+
+> Both tests used `scipy.stats.norm` with manual z-statistic and one-sided p-value (`1 - norm.cdf(z_stat)`). `nobs` set to unique clients per group — never total attempts, to avoid pseudoreplication.
 
 ---
 
@@ -191,6 +213,11 @@ The **Test** group backtracks far more on steps 1–2 (≈16% vs ≈8%) — the 
 
 🔗 [Vanguard A/B Test datasets — Ironhack provided via course portal]
 
+---
+
+## Presentation links
+
+🔗 [Google slides: https://docs.google.com/presentation/d/1gpLTHCmwkclnOi78ShSA-Dw4ycLCLS4dUNSVCDYH5Pk/edit?slide=id.p1#slide=id.p1]
 
 ---
 
@@ -203,7 +230,9 @@ The **Test** group backtracks far more on steps 1–2 (≈16% vs ≈8%) — the 
 - [x] Master dataset merge
 - [x] EDA — group balance (age, tenure, gender)
 - [x] EDA — error rates per step per group
-- [x] KPI — completion rate per group (Control vs Test)
-- [ ] Hypothesis testing (completion rate; error rate Control vs Test)
+- [x] KPI — completion rate per group (Control vs Test) — two metrics defined
+- [x] Hypothesis testing (completion rate; error rate — z-test implemented)
+- [ ] Completion time analysis per funnel step
+- [ ] Demographic cuts by age group
 - [ ] Tableau dashboards
 - [ ] Final presentation

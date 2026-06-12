@@ -12,3 +12,5 @@ output_data:
   file7: "../data/clean/df_step_by_step.csv"
   file8: "../data/clean/funnel_all_groups.csv"
   file9: "../data/clean/funnel_variation.csv"
+  file4: "../data/clean/error_compRate_clean.csv"
+  file5: "../data/clean/error_compRate_tableau.csv"

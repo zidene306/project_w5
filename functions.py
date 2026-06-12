@@ -215,21 +215,46 @@ def filter_valid_groups(df: pd.DataFrame, exclude_gender_x: bool = True) -> pd.D
     return out
 
 
-def flag_no_data_variation(df: pd.DataFrame) -> pd.DataFrame:
+
+# ---------------------------------------------------------------------------
+# ERROR-RATE & COMPLETION-RATE UTILITIES
+# (derived from Error&CompletionRates_Diana.ipynb)
+# ---------------------------------------------------------------------------
+
+STEP_ORDER = {"start": 0, "step_1": 1, "step_2": 2, "step_3": 3, "confirm": 4}
+
+
+def build_error_flags(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Replace NaN values in the Variation column with the string 'no_data'.
+    Detect backward-navigation errors within each visit_id session.
+
+    Steps:
+      1. Map process_step -> integer (step_num) using STEP_ORDER.
+      2. Sort chronologically within each session (visit_id).
+      3. Compute step_diff = diff of step_num per visit_id.
+      4. Flag the step *before* a backward move as is_error=True
+         (shift(-1) inside each group).
 
     Parameters
     ----------
     df : pd.DataFrame
-        DataFrame with a Variation column that may contain NaN values.
+        Filtered master DataFrame (no_data rows and gendr==X already dropped).
+        Must contain: visit_id, process_step, date_time.
 
     Returns
     -------
     pd.DataFrame
-        DataFrame with NaN Variation replaced by 'no_data'.
+        Input DataFrame with three new columns:
+          step_num  : int, numeric step index (0-4)
+          step_diff : float, difference from previous step in same session
+          is_error  : bool, True if this step was the origin of a backward move
     """
     out = df.copy()
-    out["Variation"] = np.where(out["Variation"].isnull(), "no_data", out["Variation"])
+    out["step_num"] = out["process_step"].map(STEP_ORDER)
+    out = out.sort_values(["date_time", "visit_id"])
+    out["step_diff"] = out.groupby("visit_id")["step_num"].diff()
+    out["is_error"] = out.groupby("visit_id")["step_diff"].transform(
+        lambda x: (x < 0).shift(-1).fillna(False)
+    )
     return out
 

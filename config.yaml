@@ -8,3 +8,7 @@ output_data:
   file2: "../data/clean/digfootpring_groups_clean.csv"
   file1: "../data/clean/clean_final_demo.csv"
   file3: "../data/clean/cleaned_dataset.csv"
+  file6: "../data/clean/df_compl_duration.csv"
+  file7: "../data/clean/df_step_by_step.csv"
+  file8: "../data/clean/funnel_all_groups.csv"
+  file9: "../data/clean/funnel_variation.csv"
